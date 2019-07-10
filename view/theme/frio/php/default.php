@@ -52,12 +52,8 @@ $is_singleuser_class = $is_singleuser ? "is-singleuser" : "is-not-singleuser";
 		} else {
 			$nav_bg = PConfig::get($uid, 'frio', 'nav_bg');
 		}
-
-		if (empty($nav_bg) || !is_string($nav_bg)) {
-			$nav_bg = "#708fa0";
-		}
-
-		echo '<meta name="theme-color" content="' . $nav_bg . '" />';
+		
+		echo '<meta name="theme-color" content="" />';
 ?>
 	</head>
 
