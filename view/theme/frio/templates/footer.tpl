@@ -21,6 +21,12 @@
 {{foreach $footerScripts as $scriptUrl}}
 			<script type="text/javascript" src="{{$scriptUrl}}"></script>
 			<script type="text/javascript">
-                $('meta[name=theme-color]').attr('content', $('.btn-primary').css('background-color'));
+			    if(typeof $('.btn-primary') === "undefined") {
+			        var themecolor = $('.btn-primary').css('background-color');
+			    } else {
+			        var themecolor = $('.topbar').css('background-color');
+			    }
+
+			    $('meta[name=theme-color]').attr('content', themecolor);
             </script>
 {{/foreach}}
