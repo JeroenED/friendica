@@ -20,4 +20,7 @@
 
 {{foreach $footerScripts as $scriptUrl}}
 			<script type="text/javascript" src="{{$scriptUrl}}"></script>
+			<script type="text/javascript">
+                $('meta[name=theme-color]').attr('content', '#888800');
+            </script>
 {{/foreach}}
